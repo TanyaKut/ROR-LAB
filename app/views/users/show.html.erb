@@ -2,9 +2,17 @@
 <h1>Hello, <%= @user.firstname %></h1>
 <p>Here is your params</p>
 <%= image_tag @user.avatar.url (:medium) %><br />
-<%= @user.firstname %><br/>
-<%= @user.lastname %><br/>
+<b><%= @user.firstname %></b><br/>
+<b><%= @user.lastname %></b><br/>
 <%= @user.email %><br/>
+<%= @user.phone %><br/>
+<%= @user.age %><br/>
+<%= @user.country %><br/>
+<%= @user.city %><br/>
+<%= @user.street %><br/>
+<%= @user.link %><br/>
 
-<%= link_to "Home", root_path %>
+
 <%= link_to "Edit Profile", edit_user_path %>
+<p>OR</p>
+<p><%= link_to "Exit", user_path(@user.id), method: :delete %></p>
