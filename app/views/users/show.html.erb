@@ -1,19 +1,18 @@
-<%= link_to "Home", root_path %>
-<h1>Hello, <%= @user.firstname %></h1>
-<p>Here is your params</p>
-<%= image_tag @user.avatar.url (:medium) %><br />
-<b><%= @user.firstname %></b><br/>
-<b><%= @user.lastname %></b><br/>
-<%= @user.email %><br/>
-<%= @user.phone %><br/>
-<%= @user.age %><br/>
-<%= @user.country %><br/>
-<%= @user.city %><br/>
-<%= @user.street %><br/>
-<%= @user.link %><br/>
-<%= @user.gender %><br/>
+<%= link_to "HOME", root_path %>
+<h1 style="text-align: center;">WELCOME, <%= @user.firstname %>!</h1>
+<p style="text-align: center; color: red;">This page contains some informations about you</p>
+<p style="text-align: center;"><%= image_tag @user.avatar.url (:medium) %></p><br />
+<p style="text-align: center;"><b><%= @user.firstname %></b> <b><%= @user.lastname %></b> - <%= @user.age %> old </br> </p>
+
+<p style="text-align: center;">
+	<span>Your email: </span> <%= @user.email %><br/>
+	<span>Your phone: </span> <%= @user.phone %><br/>
+	<span>Your country: </span> <%= @user.country %><br/>
+	<span>Your city: </span> <%= @user.city %><br/>
+	<span>Your street: </span> <%= @user.street %><br/>
+	<span>Your website: </span> <%= @user.link %><br/>
+	<span>You are: </span><%= @user.gender %><br/>
+</p>
 
 
-<%= link_to "Edit Profile", edit_user_path %>
-<p>OR</p>
-<p><%= link_to "Exit", user_path(@user.id), method: :delete %></p>
+<br/><p style="text-align: center;"><%= link_to "EDIT PROFILE", edit_user_path %> | <%= link_to "EXIT", user_path(@user.id), method: :delete %></p>

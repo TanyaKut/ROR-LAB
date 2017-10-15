@@ -1,11 +1,8 @@
-<h1>Hello, study!</h1>
-<p>You can sign up. This is all you can.</p>
+<h1 style="text-align: center;">Hello, study!</h1>
+<p style="text-align: center;">You can sign up. This is all you can.</p>
 
 <% if @user == nil %>
-<p><%= link_to "Registration", new_user_path %></p>
-<p>OR</p>
-<p><%= link_to "Login", login_path %></p>
+<p style="text-align: center;"><%= link_to "REGISTRATION", new_user_path %> | <%= link_to "LOGIN", login_path %></p>
 <% else %>
-<p><%= link_to "Profil", user_path(@user.id) %></p>
-<p><%= link_to "Exit", user_path(@user.id), method: :delete %></p>
+<p style="text-align: center;"><%= link_to "PROFIL", user_path(@user.id) %> | <%= link_to "EXIT", user_path(@user.id), method: :delete %></p>
 <% end %>
