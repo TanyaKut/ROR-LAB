@@ -1,0 +1,11 @@
+<h1>Hello, study!</h1>
+<p>You can sign up. This is all you can.</p>
+
+<% if @user == nil %>
+<p><%= link_to "Registration", new_user_path %></p>
+<p>OR</p>
+<p><%= link_to "Login", login_path %></p>
+<% else %>
+<p><%= link_to "Profil", user_path(@user.id) %></p>
+<p><%= link_to "Exit", user_path(@user.id), method: :delete %></p>
+<% end %>
