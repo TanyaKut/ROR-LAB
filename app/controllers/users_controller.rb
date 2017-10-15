@@ -47,7 +47,7 @@ end
 private
 
 def user_params
-params.require(:user).permit(:firstname, :lastname, :phone, :email, :password, :avatar, :age, :country, :city, :street)
+params.require(:user).permit(:firstname, :lastname, :phone, :email, :password, :avatar, :age, :country, :city, :street, :gender)
 end
 
 def user_session
