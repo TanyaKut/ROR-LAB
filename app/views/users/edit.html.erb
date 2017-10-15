@@ -1,16 +1,25 @@
 <%= form_for @user, method: :patch do |f| %>
+<h1 style="text-align: center;">Edit your profile</h1>
 
-<p><%= f.label "FirstName" %></p>
-<%= f.text_field :firstname %><br />
+<div style="text-align: center;">
+	<p><%= f.label "FirstName" %>
+	<%= f.text_field :firstname %>
 
-<p><%= f.label "LastName" %></p>
-<%= f.text_field :lastname %><br />
+	<p><%= f.label "LastName" %>
+	<%= f.text_field :lastname %>
 
-<p><%= f.label :email %></p>
-<%= f.text_field :email %><br />
+	<p><%= f.label :email %>
+	<%= f.text_field :email %>
 
-<p><%= f.label :password %></p>
-<%= f.password_field :password %><br />
+	<p><%= f.label :avatar %>
+	<%= f.file_field :avatar %>	
 
-<%= f.submit "SAVE" %>
+	<p><%= f.label "Phone" %>
+	<%= f.text_field :phone %>
+
+	<p><%= f.label :password %>
+	<%= f.password_field :password %><br />
+
+	<p><%= f.submit "save" %></p>
+</div>
 <% end %>

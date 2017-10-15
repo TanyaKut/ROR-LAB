@@ -4,42 +4,47 @@
 	<li><%= msg %></li>
 	<% end %>
 	<% end %>
+<h1 style="text-align: center;">Registration!</h1>
+<div style="text-align: center;">
 	
-<p><%= f.label "FirstName" %></p>
-<%= f.text_field :firstname %><br />
+	<p><%= f.label "FirstName" %>
+	<%= f.text_field :firstname %>
 
-<p><%= f.label "LastName" %></p>
-<%= f.text_field :lastname %><br />
+	<p><%= f.label "LastName" %>
+	<%= f.text_field :lastname %>
 
-<p><%= f.label :avatar %></p>
-<%= f.file_field :avatar %>	
+	<p><%= f.label :avatar %>
+	<%= f.file_field :avatar %>	
 
-<p><%= f.label "Phone" %></p>
-<%= f.text_field :phone %></br>
+	<p><%= f.label "Phone" %>
+	<%= f.text_field :phone %>
 
-<p><%= f.label "Gender" %></p>
-<%= f.select :gender, ['male','female'] %></br>
+	<p><%= f.label "Gender" %>
+	<%= f.select :gender, ['male','female'] %>
 
-<p><%= f.label "Age" %></p>
-<%= f.text_field :age %></br>
+	<p><%= f.label "Age" %>
+	<%= f.text_field :age %>
 
-<p><%= f.label "Country" %></p>
-<%= f.text_field :country %></br>
+	<p><%= f.label "Country" %>
+	<%= f.text_field :country %>
 
-<p><%= f.label "City" %></p>
-<%= f.text_field :city %></br>
+	<p><%= f.label "City" %>
+	<%= f.text_field :city %>
 
-<p><%= f.label "Street" %></p>
-<%= f.text_field :street %></br>
+	<p><%= f.label "Street" %>
+	<%= f.text_field :street %>
 
-<p><%= f.label "Your link" %></p>
-<%= f.text_field :link %></br>
+	<p><%= f.label "Your link" %>
+	<%= f.text_field :link %>
 
-<p><%= f.label :email %></p>
-<%= f.text_field :email %><br />
+	<p><%= f.label :email %>
+	<%= f.text_field :email %>
 
-<p><%= f.label :password %></p>
-<%= f.password_field :password %><br />
+	<p><%= f.label :password %>
+	<%= f.password_field :password %><br />
 
-<%= f.submit "SAVE" %>
+
+
+<p><%= f.submit "save" %> | <%= link_to "GO BACK", root_path %>
+</div>
 <% end %>

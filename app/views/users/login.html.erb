@@ -1,10 +1,13 @@
 <%= form_for :user, url:loginresult_path  do |f| %>
+<h1 style="text-align: center;">Login to your page</h1>
+<div style="text-align: center;">
 
-      <p><%= f.label :email %></p>
-   <%= f.text_field :email %><br />
+     <p><%= f.label :email %>
+   <%= f.text_field :email %>
 
-      <p><%= f.label :password %></p>
-   <%= f.password_field :password %><br />
+      <p><%= f.label :password %>
+   <%= f.password_field :password %><br/>
 
-   <%= f.submit "LOGIN" %>
-<% end %>
+   <p><%= f.submit "login" %></p>
+ </div>
+<% end %></p>
